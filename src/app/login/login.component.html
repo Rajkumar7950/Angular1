@@ -1,0 +1,33 @@
+ 
+ <!-- <form #loginForm="ngForm" class="col s12 white"
+ (ngSubmit)="OnSubmit(UserName.value,Password.value)" >
+  ...
+</form> -->
+<form [formGroup]="ngForm" (ngSubmit)="submit()">
+    <h1></h1><div style="background-color: forestgreen; color: goldenrod; text-align: center;" ><h1>Application Login</h1></div><h1></h1>
+    <div class="container">
+      <label for="uname"><b>EmailID</b></label>
+      <input type="text" placeholder="Enter EmailID" name="uname" required formControlName="EmailId">
+
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required formControlName="Password">
+        
+      <button type="submit" value="login">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" >
+      <button type="button" style="color:black;" class="cancelbtn"><a routerLink="/Reg">Register Here</a></button>
+      <br>
+      <div class="container" >
+        <a routerLink="" href="" (click)="verify()">Verify myAccount Here</a>
+        
+      <span class="psw">Forgot <a routerLink="/forgot">password?</a></span>
+    </div>
+    </div>
+ </form>
+
+ 

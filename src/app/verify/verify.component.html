@@ -1,0 +1,24 @@
+<div class="container">
+    <h1 style="color:rgb(22, 20, 20);text-align: center;">Activate Account</h1>
+    <div class="alert alert-danger" *ngIf="errorMsg;else next">{{errorMsg}}</div>
+    <ng-template #next>
+        <form [formGroup]="ngForm" (ngSubmit)="enroll()"  >
+            <div class="form-group">
+                <label>EmailId</label>
+                <input type="text" class="form-control" formControlName="EmailId">
+                <small class="text-danger" *ngIf="EmailId.invalid && EmailId.touched ">EmailId is required</small>
+            </div>
+            <div class="form-group">
+                <label>Token ID</label>
+                <input type="text" class="form-control" formControlName="TokenId">
+                <small class="text-danger" *ngIf="TokenId.invalid && TokenId.touched ">TokenId is required</small>
+            </div>
+            <div class="form-group">
+                <div>
+                    <input type="submit" [disabled]="ngForm.invalid" class="btn btn-success" value="Activate">
+                </div>
+            </div>
+        </form>
+    </ng-template>
+    <br><br>
+</div>

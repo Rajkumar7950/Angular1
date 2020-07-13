@@ -1,0 +1,69 @@
+<div style="color: rgb(128, 160, 41);">
+    <h1 style="text-align: center;">Please fill the Registration Form</h1>
+</div>
+<br>
+<br>
+<div class="container" class="col-md-12">
+
+    <form class="well form-horizontal" action="" method="post" id="contact_form" [formGroup]="ngForm"
+        (ngSubmit)="reset()">
+        <fieldset>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label">EmailID</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input name="user_password" placeholder="Email-ID" class="form-control" type="password"
+                            formControlName="EmailID">
+                    
+                    </div>
+                </div>
+            </div>
+          
+            <br>
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label">Password</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input name="user_password" placeholder="Password" class="form-control" type="password"
+                            formControlName="Password">
+                    
+                    </div>
+                </div>
+            </div>
+            <br>
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-md-4 control-label">Confirm Password</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input name="confirm_password" placeholder="Confirm Password" class="form-control"
+                            type="password" formControlName="ConfirmPassword">
+                       
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label class="col-md-4 control-label">Token ID</label>
+                <div class="col-md-4 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input name="confirm_password" placeholder="Token ID" class="form-control"
+                            type="password" formControlName="TokenId">
+                       
+                    </div>
+                </div>
+            </div>
+
+
+            <br>
+            <input type="submit"  [disabled]="ngForm.invalid"value="Submit" class="btn btn-primary">
+
+        </fieldset>
+    </form>
+</div>

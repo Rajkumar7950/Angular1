@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="text-center" style="color: seagreen;">
+                        <h3><i class="fa fa-lock fa-4x"></i></h3>
+                        <h2 class="text-center">Forgot Password?</h2>
+                        <p>You can reset your password here.</p>
+                        <div class="panel-body">
+                            <form [formGroup]="ngForm" (ngSubmit)="forgot()">
+                                <div>
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i
+                                                class="glyphicon glyphicon-envelope color-blue" style="align-items: center;"></i></span>
+                                        <input id="email" placeholder="email address" type="email"
+                                            formControlName="EmailId" class="col-md-4">
+                                            
+
+                                    </div>
+                                </div>
+                                <br />
+                                <div>
+                                    <input type="submit" value="Get Link" class="btn btn-primary">
+                                </div>
+                                <input type="hidden" class="hide" name="token" id="token" value="">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<a routerLink="/reset"></a>

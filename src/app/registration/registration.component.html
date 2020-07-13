@@ -1,0 +1,110 @@
+<div style="color: rgb(128, 160, 41);">
+  <h1 style="text-align: center;">Please fill the Registration Form</h1>
+</div>
+<br>
+<br>
+<div class="container" class="col-md-12">
+
+  <form class="well form-horizontal" action="" method="post" id="contact_form" [formGroup]="ngForm" (ngSubmit)="Regi()">
+    <fieldset>
+      <div class="form-group">
+        <label class="col-md-4 control-label">First Name</label>
+        <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input name="first_name" placeholder="First Name" class="form-control" type="text"
+              formControlName="FirstName">
+            <small class="text-danger" *ngIf="(FirstName.invalid && swapna) ">First-Name is required</small>
+          </div>
+        </div>
+      </div>
+      <br>
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label">Last Name</label>
+        <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input name="last_name" placeholder="Last Name" class="form-control" type="text" formControlName="LastName">
+            <small class="text-danger" *ngIf="LastName.invalid && swapna">Last-Name is required</small>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="form-group">
+        <label class="col-md-4 control-label">EmailID</label>
+        <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input name="last_name" placeholder="Emai-lId" class="form-control" type="text" formControlName="EmailId">
+
+            <!-- <small class="text-danger" *ngIf="EmailId.errors.email">EmailId is required</small> -->
+            <small class="text-danger" *ngIf="EmailId.invalid && swapna"></small>
+          </div>
+        </div>
+      </div>
+      <br>
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label">Username</label>
+        <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input name="user_name" placeholder="Username" class="form-control" type="text" formControlName="UserName">
+
+            <small class="text-danger" *ngIf="UserName.invalid && swapna">UserName is required</small>
+          </div>
+        </div>
+      </div>
+      <br>
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label">Password</label>
+        <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input name="user_password" placeholder="Password" class="form-control" type="password"
+              formControlName="Password">
+            <small class="text-danger" *ngIf="Password.invalid && swapna">Password must have special
+              keys</small>
+          </div>
+        </div>
+      </div>
+      <br>
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label">Confirm Password</label>
+        <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input name="confirm_password" placeholder="Confirm Password" class="form-control" type="password"
+              formControlName="ConfirmPassword">
+            <small class="text-danger" *ngIf="ConfirmPassword.invalid  && swapna">ConfirmPassword
+              and Password must be same</small>
+            <small class="text-danger"
+              *ngIf="ngForm.get(['Password']).value != ngForm.get(['ConfirmPassword']).value">ConfirmPassword
+              and Password must be same</small>
+          </div>
+        </div>
+      </div>
+      <br>
+      <!-- Text input-->
+      <div class="form-group">
+        <label class="col-md-4 control-label">Mobile Number</label>
+        <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+            <input name="contact_no" placeholder="Mobile Number" class="form-control" type="text"
+              formControlName="MobileNo">
+            <small class="text-danger" *ngIf="MobileNo.invalid && swapna">Mobile-Number is required</small>
+
+          </div>
+        </div>
+      </div>
+      <br>
+      <input type="submit" value="Submit" class="btn btn-primary"  >
+      <!-- [disabled]="ngForm.invalid" -->
+
+    </fieldset>
+  </form>
+</div>
